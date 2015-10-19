@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="app">
+<head>
+  <meta charaset="utf-8">
+  <title>Angularの練習</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="myapp.js"></script>
+</head>
+<body>
+  <h1>Angularの練習</h1>
+  <input type="text" ng-model="yourName" placeholder="Enter a name here">
+  <p>Hello {{yourName}}!</p>
+  <p>{{25 * 580|number}} <small>3桁区切り</small></p>
+  <p>{{25 * 580|currency:"¥"}} <small>通貨</small></p>
+  <div ng-controller="MainCtrl">
+    <p>{{today|date:'yyyy-MM-dd'}}</p>
+    <p>{{users.length}} users.</p>
+    <ul>
+      <li ng-repeat="user in users">
+        {{user.name}} {{user.score|number:4}}
+      </li>
+    </ul>
+  </div>
+</body>
+</html>
