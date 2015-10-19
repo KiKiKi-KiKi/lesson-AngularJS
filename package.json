@@ -1,0 +1,26 @@
+{
+  "name": "angulerjs-lesson",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaika-design/lesson-AngularJS.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaika-design/lesson-AngularJS/issues"
+  },
+  "homepage": "https://github.com/chaika-design/lesson-AngularJS#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}
