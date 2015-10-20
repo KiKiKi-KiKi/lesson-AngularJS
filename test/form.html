@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja" ng-app="app">
+<head>
+  <meta charaset="utf-8">
+  <title>Angularの練習 FORM</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+  <script src="myapp.js"></script>
+  <style>
+  .text-error {color: #D0310C;}
+  </style>
+</head>
+<body>
+  <h1>Angularの練習 FORM</h1>
+  <div ng-controller="FormCtrl">
+    <form novalidate name="myForm" ng-submit="addUser()">
+      <p>
+      Name: <input type="text" name="name" ng-model="user.name" required ng-minlength="5" ng-maxlength="8">
+      <!-- Error Message -->
+      <span class="text-error" ng-show="myForm.name.$error.required">*</span>
+      <span class="text-error" ng-show="myForm.name.$error.minlength">to short!</span>
+      <span class="text-error" ng-show="myForm.name.$error.maxlength">to long!</span>
+      </p>
+      <p><input type="submit" value="add"></p>
+    </form>
+    <!-- debug -->
+    <pre>{{user|json}}</pre>
+  </div>
+</body>
+</html>

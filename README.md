@@ -13,3 +13,6 @@
 
 - `ng-class-even="'CLASS-NAME'"` ... 偶数にクラスをつける
 - `ng-class-odd="'CLASS-NAME'"`  ... 奇数にクラスをつける
+
+### Form
+`<form novalidate>` ... novalidate HTML5のバリデーション機能をOFFにする

@@ -21,4 +21,9 @@ angular.module('app', [])
     $scope.user.score += 1;
     return $scope;
   };
+})
+.controller('FormCtrl', function($scope) {
+  // TODO: MainCtrl の users を使えるようにする
+  $scope.addUser = function() {
+  };
 });
