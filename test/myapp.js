@@ -13,4 +13,12 @@ angular.module('app', [])
     {name: 'kobayashi', score: 68.12}
   ];
   $scope.today = new Date();
+})
+.controller('UserItemCtrl', function($scope) {
+  // ネストされたコントローラーは親コントローラーの値がそのまま継承され使うことができる
+  $scope.increment = function() {
+    console.log($scope);
+    $scope.user.score += 1;
+    return $scope;
+  };
 });
