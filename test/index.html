@@ -5,6 +5,14 @@
   <title>Angularの練習</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
   <script src="myapp.js"></script>
+  <style>
+    .even {
+      background-color: #B6D0DA;
+    }
+    .odd {
+      background-color: #C3CAD4;
+    }
+  </style>
 </head>
 <body>
   <h1>Angularの練習</h1>
@@ -17,8 +25,8 @@
     <p>{{users.length}} users.</p>
     <p><input type="text" ng-model="query.name"></p>
     <ul>
-      <li ng-repeat="user in users|filter:query|orderBy:'-score'">
-        {{user.name}} {{user.score|number:4}}
+      <li ng-repeat="user in users|filter:query|orderBy:'-score'" ng-class-even="'even'" ng-class-odd="'odd'">
+        {{$index + 1}} {{$first}} {{$middle}} {{$last}} {{user.name}} {{user.score|number:4}}
       </li>
     </ul>
   </div>
