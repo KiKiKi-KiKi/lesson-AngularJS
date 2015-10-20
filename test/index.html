@@ -16,7 +16,7 @@
     <p>{{today|date:'yyyy-MM-dd'}}</p>
     <p>{{users.length}} users.</p>
     <ul>
-      <li ng-repeat="user in users|limitTo:5">
+      <li ng-repeat="user in users|orderBy:'-score'|limitTo:5">
         {{user.name}} {{user.score|number:4}}
       </li>
     </ul>
