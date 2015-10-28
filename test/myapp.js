@@ -26,4 +26,6 @@ angular.module('app', [])
   // TODO: MainCtrl の users を使えるようにする
   $scope.addUser = function() {
   };
+  $scope.colors = ['red', 'blue', 'yellow'];
+  $scope.color = $scope.colors[2];
 });

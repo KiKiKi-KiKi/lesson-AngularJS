@@ -16,3 +16,5 @@
 
 ### Form
 `<form novalidate>` ... novalidate HTML5のバリデーション機能をOFFにする
+
+API Reference https://docs.angularjs.org/api/ng/directive/form

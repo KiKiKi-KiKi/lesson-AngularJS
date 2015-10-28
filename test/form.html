@@ -20,6 +20,23 @@
       <span class="text-error" ng-show="myForm.name.$error.minlength">to short!</span>
       <span class="text-error" ng-show="myForm.name.$error.maxlength">to long!</span>
       </p>
+      <p>Score: <input type="number" name="score" ng-model="user.score"></p>
+      <p>Email: <input type="email" name="email" ng-model="user.email">
+        <span class="text-error" ng-show="myForm.email.$error.email">Not vaild email!</span>
+      </p>
+      <p>Url: <input type="url" name="url" ng-model="user.url">
+        <span class="text-error" ng-show="myForm.url.$error.url">Not vaild URL!</span>
+      </p>
+      <p><label>+18:<input type="checkbox" ng-model="user.adult" ng-true-value="'adult'" ng-false-value="'child'"></label></p>
+      <p>Phone:<br/>
+        <label><input type="radio" name="phone" ng-model="user.phone" value="iPhone"> iPhone</label><br/>
+        <label><input type="radio" name="phone" ng-model="user.phone" value="Android"> Android</label>
+      </p>
+      <p>Note:
+        <textarea name="memo" ng-model="user.memo" ng-maxlength="140"></textarea>{{140-user.memo.length}}</p>
+      <p>Color:
+        <select ng-model="color" ng-options="'label:'+c for c in colors"></select>
+      </p>
       <p><input type="submit" value="add"></p>
     </form>
     <!-- debug -->
