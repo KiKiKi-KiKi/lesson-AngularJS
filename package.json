@@ -20,7 +20,17 @@
   },
   "homepage": "https://github.com/chaika-design/lesson-AngularJS#readme",
   "devDependencies": {
+    "browser-sync": "^2.9.11",
     "gulp": "^3.9.0",
-    "gulp-webserver": "^0.9.1"
+    "gulp-nodemon": "^2.0.4",
+    "gulp-webserver": "^0.9.1",
+    "morgan": "^1.6.1",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "express": "^4.13.3",
+    "jade": "^1.11.0",
+    "nodemon": "^1.8.0",
+    "path": "^0.12.7"
   }
 }
