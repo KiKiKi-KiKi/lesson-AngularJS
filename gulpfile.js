@@ -13,7 +13,7 @@ gulp.task('nodemon', function(cb) {
       'NODE_ENV': 'development',
     },
     ext: 'js',
-    ignore: ['./todo_app/views/', 'node_modules'],
+    ignore: ['./todo_app/views/', './todo_app/assets/','node_modules'],
     stdout: false
   })
   .on('start', function() {
@@ -29,7 +29,7 @@ gulp.task('nodemon', function(cb) {
   .on('restart', function() {
     console.log('>>> restart');
     setTimeout(function() {
-      browserSync.reload({stream: true, once: true})
+      browserSync.reload({stream: true, once: true});
     }, 500);
   });
 });
@@ -59,5 +59,5 @@ gulp.task('webserver', ['nodemon'], function() {
 */
 
 gulp.task('default', ['webserver'], function() {
-  gulp.watch('todo_app/views/**', ['reload'])
+  gulp.watch(['todo_app/views/**', 'todo_app/assets/**'], ['reload']);
 });
