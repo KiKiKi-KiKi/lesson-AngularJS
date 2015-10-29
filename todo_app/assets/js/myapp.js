@@ -20,4 +20,14 @@ angular.module('app', [])
       $scope.newTaskBody = '';
     }
   };
+
+  $scope.getDoneCount = function() {
+    var count = 0;
+    angular.forEach($scope.tasks, function(task){
+      if(task.done) {
+        count += 1;
+      }
+    });
+    return count;
+  };
 });
