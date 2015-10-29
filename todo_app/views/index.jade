@@ -4,4 +4,9 @@ block body
   h1= title
   div(ng-controller="MainCtrl")
     ul
-      li(ng-repeat="task in tasks") {{task.body}}
+      li(ng-repeat="task in tasks")
+        label(class="task-{{task.done}}")
+          input(type="checkbox", ng-model="task.done")
+          | {{task.body}}
+  // debug
+  pre {{user|json}}
