@@ -7,4 +7,17 @@ angular.module('app', [])
     {id: 4, body:'do this 4', done:false},
     {id: 5, body:'do this 5', done:false},
   ];
+
+  $scope.addNew = function() {
+    var l = $scope.tasks.length,
+        data = $scope.newTaskBody.trim();
+    if(data !== undefined && data !== '') {
+      $scope.tasks[l] = {
+        id: l+=1,
+        body: data,
+        done: false
+      };
+      $scope.newTaskBody = '';
+    }
+  };
 });

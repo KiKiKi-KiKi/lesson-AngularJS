@@ -4,9 +4,12 @@ block body
   h1= title
   div(ng-controller="MainCtrl")
     ul
-      li(ng-repeat="task in tasks")
+      li(ng-repeat="task in tasks", data-task-id="{{task.id}}")
         label(class="task-{{task.done}}")
           input(type="checkbox", ng-model="task.done")
           | {{task.body}}
+    form(ng-submit="addNew()")
+      input(type="text", ng-model="newTaskBody")
+      input(type="submit", value="add")
   // debug
   pre {{user|json}}
