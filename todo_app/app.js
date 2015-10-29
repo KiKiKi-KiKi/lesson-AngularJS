@@ -7,6 +7,10 @@ var express = require('express'),
 // use jade Template
 app.set('views', path.join(__dirname + '/views'));
 app.set('view engine', 'jade');
+
+// set static file dir
+app.use('/assets', express.static(__dirname + '/assets'));
+
 // log
 app.use(logger('dev'));
 

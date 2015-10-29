@@ -29,7 +29,7 @@ gulp.task('nodemon', function(cb) {
   .on('restart', function() {
     console.log('>>> restart');
     setTimeout(function() {
-      browserSync.reload({stream: true})
+      browserSync.reload({stream: true, once: true})
     }, 500);
   });
 });
