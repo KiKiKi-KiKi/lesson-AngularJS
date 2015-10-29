@@ -3,7 +3,8 @@ include ./common/_layout
 block body
   h1= title
   div(ng-controller="MainCtrl")
-    p Finished Task: {{getDoneCount()}} / {{tasks.length}}
+    p Finished Task: {{getDoneCount()}} / {{tasks.length}} &nbsp;
+      button(ng-click="deleteDone()") CLEAR!
     ul
       li(ng-repeat="task in tasks", data-task-id="{{task.id}}")
         label(class="task-{{task.done}}")

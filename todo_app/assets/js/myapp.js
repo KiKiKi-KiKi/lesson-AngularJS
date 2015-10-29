@@ -30,4 +30,14 @@ angular.module('app', [])
     });
     return count;
   };
+
+  $scope.deleteDone = function() {
+    var newTasks = [];
+    angular.forEach($scope.tasks, function(task){
+      if(!task.done) {
+        newTasks[newTasks.length] = task;
+      }
+    });
+    $scope.tasks = newTasks;
+  };
 });
