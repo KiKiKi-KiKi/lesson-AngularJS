@@ -1,0 +1,7 @@
+- var title = 'Angularの練習 TODO LIST'
+include ./common/_layout
+block body
+  h1= title
+  div(ng-controller="MainCtrl")
+    ul
+      li(ng-repeat="task in tasks") {{task.body}}
