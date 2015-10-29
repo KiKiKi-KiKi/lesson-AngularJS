@@ -1,3 +1,5 @@
+- if(!lang)
+  - var lang = "ja"
 - if(!title)
   - var title = 'Angularの練習 TODO LIST'
 doctype html
@@ -5,6 +7,7 @@ html(lang= lang, ng-app="app")
   head
     meta(charaset="utf-8")
     title= title
+    link(rel='stylesheet', href="/assets/css/app.css")
     script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
     script(src="/assets/js/myapp.js")
   body
