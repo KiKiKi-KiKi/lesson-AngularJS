@@ -10,6 +10,7 @@ block body
         label(class="task-{{task.done}}")
           input(type="checkbox", ng-model="task.done")
           | {{task.body}}
+          button(ng-click="deleteTask($index)") [x]
     form(ng-submit="addNew()")
       input(type="text", ng-model="newTaskBody")
       input(type="submit", value="add")

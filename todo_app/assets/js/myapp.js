@@ -40,4 +40,8 @@ angular.module('app', [])
     });
     $scope.tasks = newTasks;
   };
+
+  $scope.deleteTask = function($index) {
+    $scope.tasks.splice($index, 1);
+  };
 });
